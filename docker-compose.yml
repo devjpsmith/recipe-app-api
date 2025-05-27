@@ -21,6 +21,8 @@ services:
       - DB_PASS=changeme
   db:
     image: postgres:13-alpine
+    ports:
+      - "5432:5432"
     volumes:
       - dev-db-data:/var/lib/postgres/data
     environment:
